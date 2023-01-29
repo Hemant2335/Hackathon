@@ -1,5 +1,4 @@
 
-function search(){
     let url = "https://kontests.net/api/v1/all"
     let response = fetch(url)
     response.then((v)=>{
@@ -18,4 +17,3 @@ function search(){
         document.getElementById("cardcont").innerHTML = ihtml;
         }
     })
-}

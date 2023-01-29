@@ -192,17 +192,25 @@ button{
     box-shadow: 0 0 5px 0 black;
 }
 #cardcont{
-    padding: 15vh;
+    padding-left: 10vh;
+    padding-top: 20vh;
     height: 100vh;
     width: 70vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 .card{
     background: white;
-    height: 30vh;
+    margin: 2vh;
+    height: 20vh;
     width: 15vw;
     border-radius: 9px;
     color: black;
     text-align: center;
     margin-left: 5vw;
+}
+.code{
+    position: absolute;
+    left: 30%;
+    top: 10%;
 }
