@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Body starts */
+body{
+    background: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+h1{
+    font-size: 9vh;
+}
+header{
+    width: 92%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    height: 5vh;
+    padding: 4vh;
+}
+.menu{
+    position: fixed;
+    align-items: flex-end;
+}
+section{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    margin-left: 5vw;
+    font-size: 4vh;
+}
+.tour{
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 9px ;
+    color: white;
+    position: relative;
+    top: 8vh;
+    box-shadow: 0  2px  white;
+    font-size: 3vh;
+    padding: 1vh 2vh;
+    text-decoration: none;
+    overflow: hidden;
+}
+.tour span{
+    position: relative;
+    z-index: 1;
+}
+.tour::after{
+    content: "";
+    background-color: blue;
+    height: 0;
+    width: 0;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    transition: width 1.2s, height 1s;
+}
+.tour:hover::after{
+    height: 1000px;
+    width: 1000px;
+}
+.content{
+    position: absolute;
+    left: 92vw;
+    top: 40vh;
+}
+.content ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.content ul li{
+    padding-bottom: 5vh;
+    transition: 0.5s ease-in-out;
+}
+.content ul li a{
+    text-decoration: none;
+    font-size: 2.5vh;
+    color: white;
+}
+.imgc{
+    position: absolute;
+    left: 120vh;
+    top: 20vh;
+    background-color: white;
+    height: 60vh;
+    width: 60vh;
+    border-radius: 50px;
+}
+.imgc img{
+    border-radius: 15px;
+}
+
+/*<------------------------------------------------------- chat page starts-----------------------------------------------------------> */
+
+
