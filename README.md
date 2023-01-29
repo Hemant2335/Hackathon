@@ -1,2 +1,2 @@
 # Hackathon
-This is a clone of a ecommerce Website
+This is a Chatting Website
