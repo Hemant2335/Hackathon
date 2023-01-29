@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div id="left"><a href="index.html"><img src="img/logo-no-background.png" alt=""></a></div>
+        <div id="right"><img class="menu" src="img/menu.png" alt="menu" onclick="cmenu()"></div>
+    </header>   
+    <main>
+        <div class="searchbar">
+            <input type="text" placeholder="Click here" id = "bars">
+            <button onclick="search()">Search</button>
+        </div>
+        <div class="container">
+            <div class="content0" >
+                <span class="title1">Temperature</span>
+                <div id="temp">
+                    <h2 id ="temp1">10&#176C</h2>
+                </div>
+            </div>
+            <div class="content1" >
+                <span class="title1">Humidity</span>
+                <div id="hum">
+                    <h2 id ="hum1">79%</h2>
+                </div>                    
+            </div>
+            <div class="content2" >
+                <span class="title1">Wind Speed</span>  
+                <div id="winds">
+                    <h2 id ="winds1">3.09K/h</h2>
+                </div>                  
+            </div>
+        </div>
+    </main>
+</body>
+</html>

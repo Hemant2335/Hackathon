@@ -8,9 +8,9 @@ const cmenu = ()=>{
     {
         ihtml = `<div class="content">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Chat</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a  href="#">Home</a></li>
+            <li><a href="#" >Chat</a></li>
+            <li><a href="#" >About us</a></li>
         </ul>
         </div>`
         document.getElementById("container").innerHTML = ihtml;
@@ -24,39 +24,50 @@ const cmenu = ()=>{
 
 // Sidebar Ends
 
-// local connections Starts
-
-const socket = io.connect("http://localhost:5500");
-
-const form = document.getElementById("send-cont");
-const msginpt = document.getElementById("msgInp");
-const msgcont = document.querySelector(".chatbox");
-
-const append=(msg , position)=>{
-    const msg_el = document.createElement("div");
-    msg_el.innerText = msg;
-    msg_el.classList.add("msg")
-    msg_el.classList.add(position);
-    msgcont.append(msg_el)
-
+// Weather App Starts
+function search(){
+	let x = document.getElementById("bars").value
+	const options = {
+		method: 'GET',
+		headers: {
+			'X-RapidAPI-Key': 'eeb0daffaemshccbcbf498419aaep180623jsn592c72a006e4',
+			'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+		}
+	};
+	
+	fetch(`https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${x}`, options)
+		.then(response => response.json())
+		.then(response => {
+			let ihtml = `<h2 id ="temp1">${response.temp}&#176C</h2>`
+			document.getElementById("temp").innerHTML = ihtml;
+			let khtml  = `<h2 id ="hum1">${response.humidity}%</h2>`
+			document.getElementById("hum").innerHTML = khtml;
+			let lhtml= `<h2 id ="winds1">${response.wind_speed}K/h</h2>`
+			document.getElementById("winds").innerHTML = lhtml;
+		})
+		.catch(err => console.error(err));
+	document.getElementById("bars").value = ""
 }
-form.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    const message = msginpt.value;
-    append(`You : ${message}`,"right")
-    socket.emit("send",message)
-    msginpt.value = "";
-})
-const name  = prompt("Enter your name");
 
-socket.emit("new_user_joined", name);
 
-socket.on("user_joined" , name =>{
-    append(`${name} has joined the chat`, "left"); 
-})
+// Corona app starts
 
-socket.on("recieve" , data =>{
-    append(`${data.message} : ${data.user} `,`left`); 
-})
+const options1 = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'eeb0daffaemshccbcbf498419aaep180623jsn592c72a006e4',
+		'X-RapidAPI-Host': 'vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com'
+	}
+};
 
-// local connection ends
+fetch(`https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/country-report-iso-based/${x}/can`, options1)
+	.then(response => response.json())
+	.then(response => {let cohtml = `<h2 id ="temp1">${response.TotalCases}</h2>`
+    document.getElementById("temp").innerHTML = cohtml;
+    let coohtml  = `<h2 id ="hum1">${response.TotalDeaths}%</h2>`
+    document.getElementById("hum").innerHTML = coohtml;
+    let corhtml= `<h2 id ="winds1">${response.ActiveCases}K/h</h2>`
+    document.getElementById("winds").innerHTML = corhtml;})
+	.catch(err => console.error(err));
+
+// Corona app ends

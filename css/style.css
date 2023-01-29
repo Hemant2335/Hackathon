@@ -11,7 +11,6 @@ body{
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 h1{
     font-size: 9vh;
@@ -81,7 +80,6 @@ section{
 }
 .content ul li{
     padding-bottom: 5vh;
-    transition: 0.5s ease-in-out;
 }
 .content ul li a{
     text-decoration: none;
@@ -103,63 +101,108 @@ section{
 
 /*<------------------------------------------------------- chat page starts-----------------------------------------------------------> */
 
-.chatbox{
-    background-color: #343434;
-    width: 50vw;
-    height: 75vh;
-    border-radius: 10px;
-    position: absolute;
-    top: 17%;
-    left: 25%;
-    color: white;
-    overflow-y: auto;
-    
+main{
+    height: 100vh;
 }
-.notifyc{
-    height: 5vh;
-    width: 100%;
-    margin-bottom: 2vh;
-    margin-top: 2vh;
-    text-align: center;
-
-}
-.msg{
-    background-color: #1434A4;
-    width: 24%;
-    height: 10%;
-    border-radius: 9px;
+.container{
+    font-family: 'Poppins', sans-serif;
     display: flex;
-    align-items: center;
+}
+.content0{
+    background-image: url("img/25571.jpg");
+    background-size: cover;
+    display: flex;
     justify-content: center;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+    height: 30vh;
+    width: 30vh;
+    border-radius: 12px;
+    box-shadow: 0 0 5px 0 black;
 }
-.left{
-    float: left;
-    clear: both;
+.title1{
+    padding-top: 1vh;
+    font-size: 2vh;
 }
-.right{
-    float: right;
-    clear: both;
+h2{
+    font-size: 5vh;
+}
+#temp1{
+    position: absolute;
+    top: 33%;
+    left: 32%;
+}
+#hum1{
+    position: absolute;
+    top: 33%;
+    left: 32%;
+}
+#winds{
+    position: absolute;
+    top: 33%;
+    left: 20%;
 }
 input{
-    width: 42vw;
-    height: 4vh;
     position: absolute;
-    left: 25%;
-    padding-left: 2vh;
+    top: 20%;
+    left: 45%;
+    height: 3vh;
     font-family: 'Poppins', sans-serif;
-    top: 93%;
 }
 button{
-    width: 5vw;
-    height: 4.8vh;
     position: absolute;
-    left: 69%;
-    top: 92.8%;
-    background-color: #1434A4;
-    border-radius: 5px;
+    top: 20.4%;
+    left: 60%;
     font-family: 'Poppins', sans-serif;
-    color: white;
 }
-
+.content1{
+    background-image: url("img/812556.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    color: white;
+    height: 30vh;
+    width: 30vh;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif; 
+    box-shadow: 0 0 8px 0 black;
+}
+#tempp{
+    top: 50%;
+}
+.content2{
+    background-image: url("img/2900521.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 75%;
+    color: white;
+    height: 30vh;
+    width: 30vh;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif; 
+    box-shadow: 0 0 5px 0 black;
+}
+#cardcont{
+    padding: 15vh;
+    height: 100vh;
+    width: 70vh;
+    display: flex;
+}
+.card{
+    background: white;
+    height: 30vh;
+    width: 15vw;
+    border-radius: 9px;
+    color: black;
+    text-align: center;
+    margin-left: 5vw;
+}
