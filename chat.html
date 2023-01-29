@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="http://localhost:5500/socket.io/socket.io.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 <body>
     <header>
@@ -13,6 +15,15 @@
         <div id="right"><img class="menu" src="img/menu.png" alt="menu" onclick="cmenu()"></div>
     </header>   
     <div class="chatbox">
+        <div class="notifyc"><div class="notif">Nishant joined the chat</div></div>
+        <div class="msg left">Nishant: Hii There</div>
+        <div class="msg right">Saransh: hloo </div>
     </div> 
+    <div class="send">
+        <form action="#" id="send-cont">
+            <input type="text" name="msgInp" id="msgInp">
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </div>
 </body>
 </html>
